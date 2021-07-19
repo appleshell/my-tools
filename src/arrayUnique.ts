@@ -9,6 +9,22 @@ export function arrayUnique(arr: any[]) {
   return res
 }
 
+export function myUnique(arr: any[]) {
+  if (!isArray(arr)) return
+
+  if (arr?.length < 2) return arr
+
+  let res = []
+
+  arr.forEach(item => {
+    if(!res.includes(item)) {
+      res.push(item)
+    }
+  })
+
+  return res
+}
+
 export function arrayUniqueEs6(arr: any[]) {
   if (!isArray(arr)) return
 
