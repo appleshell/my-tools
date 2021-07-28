@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #debounce {
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="debounce"></div>
+  <script type="module">
+    import debounce, { ImmeDebounce } from '../debounce.js'
+    let i = 1
+    const ele = document.getElementById('debounce')
+
+    function userAction(e) {
+      ele.innerHTML = i++
+    }
+
+    // ele.onmousemove = debounce(userAction, 1000)
+    ele.onmousemove = ImmeDebounce(userAction, 1000, true)
+  </script>
+</body>
+
+</html>
