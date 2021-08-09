@@ -1,4 +1,4 @@
-import Array from "./myForEach";
+import Array from "./myArrayMethods";
 
 describe("test customize method of Array", () => {
   test("test my forEach", () => {
